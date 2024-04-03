@@ -11,6 +11,10 @@ export const App: FC = (): ReactElement => {
       displayName: 'Home',
     },
     {
+      route: siteMap.reduxRTK,
+      displayName: 'Redux RTK',
+    },
+    {
       route: siteMap.about,
       displayName: 'About',
     },

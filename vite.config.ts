@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@shared': path.join(__dirname, './src/shared/'),
+      '@pages': path.join(__dirname, './src/pages'),
       '@components': path.join(__dirname, './src/shared/components/'),
       '@scssCore': path.join(__dirname, './src/styles/core/'),
     },

@@ -26,6 +26,9 @@
       "@shared/*": [
         "src/shared/*"
       ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
       "@components/*": [
         "src/shared/components/*"
       ],
