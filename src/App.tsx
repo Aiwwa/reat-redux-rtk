@@ -11,6 +11,10 @@ export const App: FC = (): ReactElement => {
       displayName: 'Home',
     },
     {
+      route: siteMap.reduxToolkit,
+      displayName: 'Redux Toolkit',
+    },
+    {
       route: siteMap.reduxRTK,
       displayName: 'Redux RTK',
     },
