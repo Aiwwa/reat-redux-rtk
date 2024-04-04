@@ -1,7 +1,7 @@
 import './App.css';
 import { Link, Outlet } from 'react-router-dom';
 import { siteMap } from './site-map.ts';
-import { NavigationMenuType } from './shared/types.ts';
+import { NavigationMenuType } from '@shared/types/types.ts';
 import { FC, ReactElement } from 'react';
 
 export const App: FC = (): ReactElement => {
