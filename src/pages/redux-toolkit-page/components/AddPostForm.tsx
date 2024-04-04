@@ -1,11 +1,11 @@
 import { FC, ReactElement, SetStateAction, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addPost } from '@features/posts/postslice.ts';
-import { nanoid } from '@reduxjs/toolkit';
+import { AppDispatch } from '@shared/types/types.ts';
 
 const AddPostForm: FC = (): ReactElement => {
-  const dispatch = useDispatch();
-  
+  const dispatch: AppDispatch = useDispatch();
+
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -15,13 +15,7 @@ const AddPostForm: FC = (): ReactElement => {
     setContent(e.target.value);
 
   const handleFormSubmit = () => {
-    dispatch(
-      addPost({
-        id: nanoid(),
-        title,
-        content,
-      })
-    );
+    dispatch(addPost({ title, content }));
   };
 
   return (
