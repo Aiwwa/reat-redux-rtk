@@ -33,4 +33,6 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and
   add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-- start json server in project root directory: json-server --watch scr/data/db.json --port 3500
+- Start json server in project root directory: json-server --watch scr/data/db.json --port 3500
+- For faster learning this project uses inline styles with is bad practice and I not recommend using it in your own
+  projects.

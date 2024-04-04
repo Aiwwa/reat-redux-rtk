@@ -11,3 +11,9 @@ export interface PostType {
     coffee: number;
   };
 }
+
+export interface NewPostType {
+  id: string;
+  title: string;
+  content: string;
+}

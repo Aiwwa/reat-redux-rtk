@@ -1,40 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { sub } from 'date-fns';
-import { PostType } from '@shared/types/post-type.ts';
-
-const initialState: PostType[] = [
-  {
-    id: '1',
-    title: 'Learning Redux Toolkit',
-    content: "I've heard good things.",
-    date: sub(new Date(), { minutes: 10 }).toISOString(),
-    reactions: {
-      thumbsUp: 0,
-      wow: 0,
-      heart: 0,
-      rocket: 0,
-      coffee: 0,
-    },
-  },
-  {
-    id: '2',
-    title: 'Slices...',
-    content: 'The more I say slice, the more I want pizza.',
-    date: sub(new Date(), { minutes: 5 }).toISOString(),
-    reactions: {
-      thumbsUp: 0,
-      wow: 0,
-      heart: 0,
-      rocket: 0,
-      coffee: 0,
-    },
-  },
-];
+import { initialState } from '@features/posts/initial-state.ts';
 
 const postsSlice = createSlice({
   name: 'posts',
   initialState,
-  reducers: {},
+  reducers: {
+    addPost: (state, action) => {
+      state.push(action.payload);
+    },
+  },
 });
 
+export const { addPost } = postsSlice.actions;
 export const postsReducer = postsSlice.reducer;
